@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="João Filipe Barros | Commercial & Account Management | AI, SaaS & Technology">
+<title>João Filipe Barros | Commercial × AI</title>
+<style>
+:root{
+  --bg:#07110d; --panel:#0d1b15; --panel2:#10231b; --text:#f2f5f1;
+  --muted:#a8b5ad; --line:#294237; --accent:#c8ff5a; --accent2:#8ce66b;
+  --max:1120px; --radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;overflow-x:hidden;background:radial-gradient(circle at 85% 10%,#173c28 0,transparent 32%),var(--bg);
+  color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.55;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1000px,calc(100% - 140px));margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,17,13,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;letter-spacing:-.03em}.brand span{color:var(--accent)}
+.navlinks{display:flex;gap:24px;color:var(--muted);font-size:14px}
+.navlinks a:hover{color:var(--text)}
+.hero{padding:115px 0 90px;display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #3b5a49;border-radius:999px;padding:7px 12px;color:#d9e8df;font-size:13px;background:#0d1d16}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent)}
+h1{font-size:clamp(50px,7vw,86px);line-height:.94;letter-spacing:-.065em;margin:24px 0}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{font-size:20px;color:#c3cec7;max-width:680px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:12px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:.2s}
+.btn.primary{background:var(--accent);color:#07110d;border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+.hero-card{border:1px solid var(--line);background:linear-gradient(145deg,#10241a,#0a1510);border-radius:28px;padding:22px;box-shadow:0 24px 80px rgba(0,0,0,.28)}
+.window{border:1px solid #2b493b;border-radius:18px;overflow:hidden;background:#08120e}
+.window-top{padding:11px 14px;border-bottom:1px solid #20362c;color:#708278;font-size:12px;display:flex;gap:7px}
+.circle{width:8px;height:8px;border-radius:50%;background:#365345}
+.workflow{padding:18px}
+.node{padding:15px;border:1px solid #315040;border-radius:14px;background:#0d1d16;margin:10px 0}
+.node strong{display:block;font-size:14px}.node small{color:#83958b}
+.arrow{text-align:center;color:var(--accent);font-size:18px}
+section{padding:82px 0;border-top:1px solid rgba(255,255,255,.07)}
+.section-kicker{color:var(--accent);font-size:13px;text-transform:uppercase;letter-spacing:.14em;font-weight:800}
+h2{font-size:clamp(34px,5vw,54px);letter-spacing:-.045em;line-height:1.02;margin:12px 0 18px}
+.section-intro{color:var(--muted);max-width:720px;font-size:18px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:35px}
+.stat{padding:24px;border:1px solid var(--line);background:var(--panel);border-radius:18px}
+.stat b{display:block;font-size:34px;letter-spacing:-.04em;color:var(--accent)}.stat span{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:34px}
+.card{padding:30px;border:1px solid var(--line);background:var(--panel);border-radius:20px}
+.card h3{margin:0 0 8px;font-size:20px}.card p{color:var(--muted);margin:0}
+.tag{display:inline-block;margin-bottom:18px;padding:6px 9px;border-radius:8px;background:#173323;color:#cce8d6;font-size:12px;font-weight:700}
+.timeline{margin-top:34px;border-left:1px solid #345343;padding-left:28px}
+.role{position:relative;padding:0 0 35px}
+.role:before{content:"";position:absolute;left:-34px;top:7px;width:9px;height:9px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 5px var(--bg)}
+.role h3{margin:0;font-size:20px}.role .meta{color:var(--accent);font-size:13px;margin:4px 0 10px}.role p{color:var(--muted);margin:0}
+.impact{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap}.impact span{border:1px solid #304b3d;padding:6px 9px;border-radius:8px;color:#d3dfd8;font-size:12px}
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:35px}
+.fit .card{min-height:190px}
+.cta{padding:80px 0 105px;text-align:center}
+.cta-box{border:1px solid #46644f;background:linear-gradient(135deg,#11271c,#0b1711);border-radius:28px;padding:55px 30px}
+.cta p{color:var(--muted);max-width:650px;margin:0 auto;font-size:18px}
+footer{padding:28px 0;color:#708078;border-top:1px solid rgba(255,255,255,.07);font-size:13px;display:flex;justify-content:space-between;gap:15px}
+@media(max-width:820px){
+ body{overflow-x:hidden}
+ .container{width:min(calc(100% - 56px), var(--max))}
+ .hero{grid-template-columns:1fr;padding:64px 28px 58px;gap:0;overflow:hidden}
+ .hero-card{display:none}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .grid,.fit{grid-template-columns:1fr}
+ .navlinks{display:none}
+ h1{font-size:clamp(44px,12vw,58px);line-height:.96;letter-spacing:-.06em;max-width:100%;overflow-wrap:break-word}
+ .lead{font-size:18px;line-height:1.5}
+ .actions{gap:8px}
+ .btn{padding:12px 15px}
+ section{padding:64px 0}
+ h2{font-size:38px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav">
+    <a class="brand" href="#">JOÃO<span>.</span></a>
+    <div class="navlinks">
+      <a href="#fit">Why Tines</a><a href="#impact">Impact</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="hero" style="border-top:0">
+  <div>
+    <div class="eyebrow"><span class="dot"></span> Proactive application · Dublin</div>
+    <h1>Helping teams turn<br>AI into <em>action.</em></h1>
+    <p class="lead">
+      I'm João Filipe Barros, a B2B sales and account management professional with 6+ years across technology,
+      AI, digital marketing and international commercial environments.
+    </p>
+    <p style="margin-top:18px;color:#8fa198;font-size:14px;max-width:620px">Dublin · Commercial / Account Growth · AI & intelligent workflows</p><div class="actions">
+      <a class="btn primary" href="mailto:joao.barros.ie@gmail.com?subject=João%20Filipe%20Barros%20%E2%80%94%20Tines">Let's talk →</a>
+      <a class="btn" href="/cv.pdf" target="_blank" rel="noopener">View CV ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/joaofilipebarros" target="_blank">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="window">
+      <div class="window-top"><span class="circle"></span><span class="circle"></span><span class="circle"></span>&nbsp; commercial-workflow</div>
+      <div class="workflow">
+        <div class="node"><strong>Customer signal</strong><small>Need · friction · opportunity</small></div>
+        <div class="arrow">↓</div>
+        <div class="node"><strong>Discovery & qualification</strong><small>Business context → solution fit</small></div>
+        <div class="arrow">↓</div>
+        <div class="node"><strong>Growth outcome</strong><small>Acquisition · retention · revenue</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+<div class="container">
+  <div class="section-kicker">Why Tines</div>
+  <h2>AI adoption is a commercial problem, too.</h2>
+  <p class="section-intro">
+    Tines is moving from automation into an AI native environment where teams can build, govern and scale
+    agents, apps and workflows. That shift is exactly where my background becomes relevant: customer growth,
+    consultative B2B selling, digital acquisition and hands-on AI operations at Meta.
+  </p>
+  <div class="fit">
+    <div class="card"><span class="tag">01 · COMMERCIAL</span><h3>Customer first growth</h3><p>50+ B2B accounts, 26 new commercial accounts and £950K pipeline built through new business, upsell and cross-sell.</p></div>
+    <div class="card"><span class="tag">02 · AI / TECH</span><h3>AI literacy from the inside</h3><p>At Meta, worked on LLM training and evaluation in a high volume technology environment, with 100% QA accuracy for approximately 18 months.</p></div>
+    <div class="card"><span class="tag">03 · INTERNATIONAL</span><h3>Comfort across markets</h3><p>Commercial experience spanning EMEA, LATAM, North America and APAC, with Portuguese, English and Spanish.</p></div>
+    <div class="card"><span class="tag">04 · TINES FIT</span><h3>From signal to outcome</h3><p>Tines connects people, AI and enterprise systems. My commercial work has always centred on the same translation: identify the signal, understand the need and turn it into a measurable customer outcome.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="impact">
+<div class="container">
+  <div class="section-kicker">Selected impact</div>
+  <h2>Numbers I can defend.</h2>
+  <div class="stats">
+    <div class="stat"><b>£950K</b><span>pipeline built</span></div>
+    <div class="stat"><b>50+</b><span>B2B accounts managed</span></div>
+    <div class="stat"><b>26</b><span>new commercial accounts</span></div>
+    <div class="stat"><b>100%</b><span>QA accuracy ~18 months</span></div>
+  </div>
+  <div class="grid">
+    <div class="card"><span class="tag">E COMMERCE</span><h3>€250K → €650K</h3><p>Grew e commerce revenue in seven months after developing and launching a Google Ads acquisition strategy.</p></div>
+    <div class="card"><span class="tag">CUSTOMER GROWTH</span><h3>+32% repeat visitors</h3><p>Redesigned the customer conversion journey and introduced targeted initiatives based on customer behaviour.</p></div>
+    <div class="card"><span class="tag">REVENUE</span><h3>€3K → ~€7.1K daily</h3><p>Increased daily coffee-business revenue through commercial growth and customer focused initiatives.</p></div>
+    <div class="card"><span class="tag">AI OPERATIONS</span><h3>97% average QA</h3><p>Maintained a 97% average QA score and received three Top Performer awards at Meta via Covalen.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="experience">
+<div class="container">
+  <div class="section-kicker">Experience</div>
+  <h2>A commercial profile with technical context.</h2>
+  <div class="timeline">
+    <div class="role"><h3>B2B Account Manager · Sales Specialist — Lab Unlimited</h3><div class="meta">Dublin · Jul 2026 to Present</div><p>Full cycle B2B sales, 50+ account portfolio, 26 new accounts, £950K pipeline, international customer management and commercial negotiation.</p></div>
+    <div class="role"><h3>AI Operations Analyst — Meta via Covalen</h3><div class="meta">Dublin · May 2024 to Jun 2026</div><p>LLM training and evaluation, quality operations, analytical judgement and structured decision-making in a large scale technology environment.</p></div>
+    <div class="role"><h3>Sales & Growth Manager — Grupo Kanpai</h3><div class="meta">Porto · Jul 2022 to Aug 2023</div><p>Revenue growth, customer acquisition, retention, platform partnerships and customer experience optimisation.</p></div>
+    <div class="role"><h3>E commerce Sales Manager — Companhia Europeia de Desinfecções</h3><div class="meta">Porto · Jul 2020 to Jan 2022</div><p>Google Ads, e commerce growth, B2B retention and commercial and financial management.</p></div>
+    <div class="role"><h3>Sales Executive — TIBA Portugal</h3><div class="meta">Porto · Feb 2019 to Aug 2019</div><p>SMB business development, Salesforce pipeline management and international customer accounts.</p></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="section-kicker">What I’m looking for</div>
+  <h2>I want to sell the change Tines is enabling.</h2>
+  <p class="section-intro">
+    I’m interested in commercial opportunities across Account Management, Sales, Customer Growth and Business Development,
+    particularly where understanding technology and translating customer problems into business outcomes matters.
+  </p>
+  <div class="grid">
+    <div class="card"><h3>Customer conversations</h3><p>Discovery, qualification, solution positioning, negotiation and long term account relationships.</p></div>
+    <div class="card"><h3>Business outcomes</h3><p>Acquisition, retention, pipeline creation, revenue growth and identifying expansion opportunities.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="contact" class="cta">
+<div class="container">
+  <div class="cta-box">
+    <div class="section-kicker">Open conversation</div>
+    <h2>There may not be a role open.<br>That’s not a reason not to talk.</h2>
+    <p>If my background could be useful to Tines now or in the next commercial hiring cycle, I’d welcome a conversation.</p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn primary" href="mailto:joao.barros.ie@gmail.com?subject=João%20Filipe%20Barros%20%E2%80%94%20Tines">Email João →</a>
+      <a class="btn" href="https://www.linkedin.com/in/joaofilipebarros" target="_blank">Connect on LinkedIn ↗</a>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer class="container">
+  <span>© 2026 João Filipe Barros</span>
+  <span>Dublin, Ireland · Portuguese / English / Spanish</span>
+</footer>
+</body>
+</html>
